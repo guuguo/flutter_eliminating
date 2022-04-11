@@ -1,6 +1,9 @@
 import 'package:eliminating/page/game.dart';
+import 'package:eliminating/page/stage_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'page/game_board.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Game(),
+      home: StageListWidget() ,
     );
   }
 }

@@ -8,6 +8,7 @@ import 'package:get/get.dart';
 
 import 'model.dart';
 
+///游戏小方块
 class GameBlockWidget extends StatefulWidget {
   const GameBlockWidget(this.type, this.point, {Key? key}) : super(key: key);
 
@@ -79,7 +80,7 @@ class _GameBlockWidgetState extends State<GameBlockWidget> {
       }
     }
     else if(controller.eliminateAnim != BlockAnimState.no){
-      if(controller.eliminateMarkResult![widget.point.x][widget.point.y]==1) {
+      if(controller.eliminateMarkResult![widget.point.x][widget.point.y]!=0) {
         return AnimatedScale(
           duration: const Duration(milliseconds: kBlockElimintateAnimDuration),
           curve: Curves.bounceOut,

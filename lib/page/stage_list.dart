@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:collection/collection.dart';
 import 'package:eliminating/page/game.dart';
 import 'package:eliminating/res.dart';
+import 'package:eliminating/utils/list_ext.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
@@ -106,7 +107,7 @@ class _StageListWidgetState extends State<StageListWidget> {
                   ]));
                 },
               ),
-            ],
+            ].separated((i)=>const SizedBox(height:50)),
           ),
         ),
       ),

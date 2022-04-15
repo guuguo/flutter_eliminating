@@ -7,4 +7,4 @@
 并包含简单的动画。
 纯flutter布局实现。
 
-![image](https://user-images.githubusercontent.com/12984352/163543841-a10c5f5a-7de3-48ec-ad35-8ac162823d6e.png)
+![3a044309-07d7-4262-b29b-2557881ebf38](https://user-images.githubusercontent.com/12984352/163544028-2c874de8-f913-4cc2-b89a-307374ebb38b.gif)

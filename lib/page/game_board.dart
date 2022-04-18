@@ -17,11 +17,8 @@ class GameBoardWidget extends StatefulWidget {
 
 ///墙壁flag
 final kB = 0x100;
-
-///是否被选中
-final kFlagFocuse = 0x200;
+///未初始化的正常棋盘
 final kN = 0;
-
 ///方块的正常样式
 final kBlockType = 0xFF;
 ///方块的状态信息
@@ -55,18 +52,20 @@ class _GameBoardWidgetState extends State<GameBoardWidget> {
             },
             child: GetBuilder<GameController>(builder: (logic) {
               return Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: logic.board
-                      .mapIndexed((i, row) =>
-                      Row(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: logic.board
+                    .mapIndexed((i, row) => Row(
                           mainAxisSize: MainAxisSize.min,
                           children: row
-                              .mapIndexed((j, e) =>
-                              GameBlockWidget(e, Point(i, j),))
-                          .toList(),
-                  ))
-                  .toList(),);
+                              .mapIndexed((j, e) => GameBlockWidget(
+                                    e,
+                                    Point(i, j),
+                                  ))
+                              .toList(),
+                        ))
+                    .toList(),
+              );
             }),
           ),
         ],

@@ -7,3 +7,8 @@
 并包含简单的动画。
 纯flutter布局实现。
 
+## web在子目录中跑起来
+```
+flutter build web --base-href="/eliminating/"
+```
+## 演示地址 https://guuguo.github.io/eliminating/
